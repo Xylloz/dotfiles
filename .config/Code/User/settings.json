@@ -1,0 +1,119 @@
+{
+  // Open json editor for settings
+  "workbench.settings.editor": "json",
+  "workbench.startupEditor": "none",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 18,
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontSize": 16,
+
+  // Theme
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Confirm Action
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  // onSave
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+
+  // JS/TS
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "breadcrumbs.enabled": false,
+  "editor.minimap.enabled": false,
+
+  // Editor
+  "editor.linkedEditing": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+
+  // CodeSnap
+  "codesnap.shutterAction": "copy",
+  "codesnap.realLineNumbers": true,
+  "codesnap.showWindowTitle": true,
+  "codesnap.showWindowControls": false,
+
+  // Project Manager
+  "projectManager.git.baseFolders": ["$home/xylloz/Repos", "$home/Desktop"],
+  "projectManager.sortList": "Recent",
+
+  // Toggle File Visibility
+  "files.exclude": {
+    "**/.vscode": false,
+    "**/.git": false,
+    "**/.gitignore": false,
+    "**/.next": false,
+    "**/.husky": false,
+    "**/.eslintrc.cjs": false,
+    "**/.eslint.config.js": false,
+    "**/.eslint.config.cjs": false,
+    "**/.DS_Store": false,
+    "**/dist": false,
+    "**/node_modules": false,
+    "**/postcss.config.js": false,
+    "**/README.md": false,
+    "**/package-lock.json": false,
+    "**/prettier.config.js": false,
+    "**/.prettierignore": false,
+    "**/tailwind.config.js": false,
+    "**/tailwind.config.ts": false,
+    "**/jest.config.js": false,
+    "**/.babelrc": false,
+    "**/babel.config.js": false,
+    "**/.travis.yml": false
+  },
+
+  // Vim
+  "vim.leader": "<space>",
+  "vim.foldfix": true,
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(230, 97, 170, 0.5)",
+  "vim.highlightedyank.textColor": "white",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Switch buffer
+    { "before": ["<S-h>"], "commands": [":bprev"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // Switch panels
+    { "before": ["<C-S-h>"], "commands": ["<C-w>h"] },
+    { "before": ["<C-S-l>"], "commands": ["<C-w>l"] },
+
+    // Split Window
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // Toggle Bool
+    { "before": ["leader", "i"], "commands": ["extension.toggleBool"] },
+
+    // Close context
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+
+    // Hovers
+    { "before": ["leader", "k"], "commands": ["editor.action.showHover"] },
+    { "before": ["leader", "c", "a"], "commands": ["editor.action.quickFix"] },
+    { "before": ["z", "a"], "commands": ["editor.toggleFold"] }
+  ],
+  "svelte.enable-ts-plugin": true,
+  "workbench.editor.empty.hint": "hidden",
+  "editor.fontFamily": "JetBrains Mono",
+  "protopi.mockServer.port": 3233,
+  "window.titleBarStyle": "custom",
+  "glassit.alpha": 230,
+  "workbench.statusBar.visible": false
+}
