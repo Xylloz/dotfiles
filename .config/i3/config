@@ -12,6 +12,7 @@
 set $mod Mod4
 
 exec_always xinput set-prop 10 314 1
+exec_always autotiling
 
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh 
@@ -56,6 +57,9 @@ floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
+
+# start firefox
+bindsym $mod+Shift+Return exec firefox
 
 # start a terminal
 bindsym $mod+Return exec kitty
