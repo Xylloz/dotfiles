@@ -22,3 +22,6 @@ vim.keymap.set("v", "<leader>d", '"_d')
 
 vim.keymap.set("n", "<S-h>", ":bp<CR>")
 vim.keymap.set("n", "<S-l>", ":bn<CR>")
+
+vim.keymap.set("n", "<C-f>", "<cmd>!tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
