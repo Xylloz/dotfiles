@@ -5,12 +5,12 @@ return {
 		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				svelte = { "prettierd", "prettier", stop_after_first = true },
-				javascript = { "prettierd", "prettier", stop_after_first = true },
-				typescript = { "prettierd", "prettier", stop_after_first = true },
-				javascriptreact = { "prettierd", "prettier", stop_after_first = true },
-				typescriptreact = { "prettierd", "prettier", stop_after_first = true },
-				json = { "prettierd", "prettier", stop_after_first = true },
+				svelte = { "biome", "prettierd", "prettier", stop_after_first = true },
+				javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
+				typescript = { "biome", "prettierd", "prettier", stop_after_first = true },
+				javascriptreact = { "biome", "prettierd", "prettier", stop_after_first = true },
+				typescriptreact = { "biome", "prettierd", "prettier", stop_after_first = true },
+				json = { "biome", "prettierd", "prettier", stop_after_first = true },
 				markdown = { "prettierd", "prettier", stop_after_first = true },
 				python = { "isort", "black" },
 				yaml = { "yamlfix" },
@@ -21,6 +21,9 @@ return {
 				-- These options will be passed to conform.format()
 				timeout_ms = 500,
 				lsp_format = "fallback",
+			},
+			formatters = {
+				prettierd = {},
 			},
 		})
 	end,

@@ -9,7 +9,16 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "pyright", "ts_ls", "tailwindcss", "lua_ls", "clangd", "gopls", "rust_analyzer" },
+				ensure_installed = {
+					"pyright",
+					"ts_ls",
+					"tailwindcss",
+					"biome",
+					"lua_ls",
+					"clangd",
+					"gopls",
+					"rust_analyzer",
+				},
 			})
 		end,
 	},
@@ -26,6 +35,7 @@ return {
 			lspconfig.clangd.setup({ capabilities = capabilities })
 			lspconfig.gopls.setup({ capabilities = capabilities })
 			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
+			lspconfig.biome.setup({ capabilities = capabilities })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
